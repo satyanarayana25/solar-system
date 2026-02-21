@@ -30,7 +30,7 @@ jobs:
         - name: Setup NodeJS Version
           uses: actions/setup-node@v6
           with:
-            node-version: $ {{ matrix.NodeJS_version }}
+            node-version: ${{ matrix.NodeJS_version }}
     
         - name: Install Dependencies
           run: npm install
