@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-      - 'chinna_workflow/*'
-      - 'chinna_workflow/**'
+      - chinna_workflow
+      
 env:
   MONGO_URL: mongodb://localhost:27017/solar-system
   MONGO_USERNAME: $ {{vars.MONGO_USERNAME}}
