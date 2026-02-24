@@ -8,8 +8,8 @@ on:
       - 'chinna_workflow/**'
 env:
   MONGO_URL: mongodb://localhost:27017/solar-system
-#     MONGO_USERNAME: $ {{vars.MONGO_USERNAME}}
-#     MONGO_PASSWORD: $ {{secrets.MONGO_PASSWORD}}    
+  MONGO_USERNAME: $ {{vars.MONGO_USERNAME}}
+  MONGO_PASSWORD: $ {{secrets.MONGO_PASSWORD}}    
 jobs:
     unit-testing:
         name: Unit Testing
