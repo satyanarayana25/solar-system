@@ -7,7 +7,7 @@ on:
       - chinna_workflow
       
 env:
-  MONGO_URL: mongodb://localhost:27017/solar-system
+  MONGO_URL: mongodb://root:rootpassword@localhost:27017/solar-system?authSource=admin
   MONGO_USERNAME: $ {{ vars.MONGO_USERNAME }}
   MONGO_PASSWORD: $ {{ secrets.MONGO_PASSWORD }}    
 jobs:
