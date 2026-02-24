@@ -5,10 +5,10 @@ on:
     branches:
       - main
       - 'chinna_workflow/*'
-env:
-    MONGO_URL: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData'
-    MONGO_USERNAME: $ {{vars.MONGO_USERNAME}}
-    MONGO_PASSWORD: $ {{secrets.MONGO_PASSWORD}}    
+# env:
+#     MONGO_URL: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData'
+#     MONGO_USERNAME: $ {{vars.MONGO_USERNAME}}
+#     MONGO_PASSWORD: $ {{secrets.MONGO_PASSWORD}}    
 jobs:
     unit-testing:
         name: Unit Testing
