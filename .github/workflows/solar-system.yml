@@ -1,11 +1,10 @@
 name: Solar System Workflow
-
 on: 
   workflow_dispatch:
   push:
     branches:
       - main
-      - 'chinna_workflow'
+      - 'feature/*'
 env:
     MONGO_URL: 'mongodb+srv://supercluster.d83jj.mongodb.net/superData'
     MONGO_USERNAME: $ {{vars.MONGO_USERNAME}}
@@ -13,24 +12,15 @@ env:
 jobs:
     unit-testing:
         name: Unit Testing
-        strategy:
-           matrix:
-              NodeJS_version: [20,20.8,24]
-              OS: [ubuntu-latest]
-              exclude:
-                - NodeJS_version: 19
-                  os: ubuntu_latest
-
-
-        runs-on: ${{ matrix.OS }}
-        steps:
+        runs-on: ubuntu-latest
+        steps:  
         - name: Checkout Repository
           uses: actions/checkout@v6
 
         - name: Setup NodeJS Version
           uses: actions/setup-node@v6
           with:
-            node-version: ${{ matrix.NodeJS_version }}
+            node-version: 20
     
         - name: Install Dependencies
           run: npm install
